@@ -1,0 +1,67 @@
+﻿#box 
+{
+    height:340px;
+    width:880px;
+    background-color:firebrick;
+    border-radius:10px;
+    margin-left:40px;
+    margin-right:40px;
+    margin-bottom:5px;
+    padding:20px;
+}
+#address 
+{
+height:270px;
+width:370px;
+float:left;
+background:white;
+border-radius:10px;
+margin:10px;
+padding:25px;
+font-size:20px;
+font-weight:bold;
+color:#00ff21;
+}
+#map 
+{
+height:270px;
+width:370px;
+float:left;
+background:white;
+border-radius:10px;
+margin:10px;
+font-size:20px;
+padding:25px;
+}
+h2
+ {
+color:Green;
+text-shadow:2px 2px 2px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

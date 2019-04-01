@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="GeneralMaster.master.cs" Inherits="GeneralMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/GeneralMasterStyle.css" rel="stylesheet" type="text/css" />
+    <script>
+        var allimages = ["project1 - Copy.jpg", "project10 - Copy.jpg", "project2 - Copy.jpeg", "project3 - Copy.gif", "project4.JPG", "project7.jpg", "rsz_Poster.jpg", "project5 - Copy.jpg", "project6 - Copy.jpg", "project8 - Copy.jpg", "project9.jpg"]
+        var imgno = 0;
+        function moveMySlider() {
+            var myimage = document.getElementById("imgslide");
+            myimage.src = "images/slide/" + allimages[imgno];
+            imgno++;
+            if (imgno == allimages.length)
+                imgno = 0;
+            window.setTimeout("moveMySlider()",2000);
+        }
+    </script>
+</head>
+<body onload="moveMySlider()">
+    <form id="form1" runat="server">
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+                <img src="images/LogoMakr.png" width="130px" height="130px" />
+            </div>
+            <div id="sitetitle"><i>Welcome To PolyGuide</i></div>
+        </div>
+        <div id="menu">
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                <DynamicHoverStyle BackColor="#CCFF99" BorderColor="#660033" BorderStyle="Solid" Font-Bold="True" ForeColor="Red" />
+                <DynamicMenuItemStyle BackColor="#66FF66" Font-Size="X-Large" ForeColor="White" HorizontalPadding="30px" VerticalPadding="5px" />
+                <Items>
+                    <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Our Objective" Value="Our Objective" NavigateUrl="~/OObj.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Online Entrance Exam" Value="Online Entrance Exam">
+                        <asp:MenuItem Text="Notification" Value="Notification" NavigateUrl="~/Notification.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Registration Form" Value="Registration Form" NavigateUrl="~/Registrationform.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Contact Us" Value="Contact Us" NavigateUrl="~/Contactus.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Login" Value="Login" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Image Gallery" Value="Image Gallery" NavigateUrl="~/Imagegallery.aspx"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle Font-Bold="True" Font-Italic="False" />
+                <StaticMenuItemStyle Font-Size="Large" ForeColor="White" HorizontalPadding="39px" VerticalPadding="15px" />
+            </asp:Menu>
+        </div>
+        <div id="slider">
+            <img id="imgslide" width="1000px" height="250px" />
+        </div>
+        <div id="main">
+            <asp:ContentPlaceHolder id="CPHMain" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer">
+            <div id="lfooter" class="footerpart">
+                <a href="http://www.youtube.com" target="_blank"><img src="images/Footer/4.png" height="25px" width="25px" style="border-radius:50px" />Youtube</a>
+                <a href="http://www.facebook.com" target="_blank"><img src="images/Footer/1.png" height="25px" width="25px" style="border-radius:50px" />Facebook</a>
+                <a href="http://www.google.com" target="_blank"><img src="images/Footer/google.jpg" height="25px" width="25px" style="border-radius:50px" />google</a>
+                <a href="http://www.twitter.com" target="_blank"><img src="images/Footer/2.png" height="25px" width="25px" style="border-radius:50px" />twitter</a><br />
+            </div>
+            <div id="rfooter" class="footerpart">
+               <div style="width:70%;float:left">
+                   <b> <i>Developed By:Er.Sachchidanand Shukla</b><br />
+                  <b> Contact Us:9919795312,8931958224.</b>
+                  <b> College:C.S.J.M.Govt.Poly.Akbarpur<br /></b>
+                      Copyright &copy; <a href="http://www.softproindia.org">
+                       Softpro India Lucknow</i> </a>
+                   </div>
+                <div style="width:30%;float:left">
+                    <img src="images/Shukla (2).jpg"  width="90px" height="80px" style="border:1px solid blue;border-radius:20px" />
+                </div>
+                </div>
+               </div>
+            </div>
+    </form>
+</body>
+</html>

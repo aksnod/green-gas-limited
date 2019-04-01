@@ -1,0 +1,45 @@
+﻿body {
+background-image:url(../images/title.jpg);
+}
+#box{
+width:800px;
+height:auto;
+margin:0px auto; 
+background:white;
+}
+#header {
+height:100px;
+width:800px;
+margin:0px;
+}
+#headlogo {
+height:150px;
+width:120px;
+background:#f00;
+float:left;
+}
+#headline {
+height:100px;
+width:580px;
+background-color:#68ce21;
+float:left;
+color:#ff6a00;
+font-size:35px;
+padding-left:100px;
+padding-bottom:50px;
+}
+input {
+margin-bottom:15px;
+padding-left:3px;
+height:15px;
+}
+#tab1 {
+background-image:url(../images/title_blank.jpg);
+height:300px;
+width:800px;
+color:white;
+padding-left:270px;
+padding-top:50px;
+padding-bottom:50px;
+margin-left: 0px;
+}

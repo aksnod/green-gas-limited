@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="../css/AdminStyle.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="box">
+        <div id="header">
+            <div id="logo">
+                <img src="../images/LogoMakr.png" width="150px" height="130px"  />
+            </div>
+            <div id="banner">
+                <embed src="../images/Polyguidenew.swf" width="850px" height="135px" />
+            </div>
+        </div>
+        <div id="menu">
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                <DynamicHoverStyle BackColor="#FFFFCC" BorderColor="#9900FF" BorderWidth="1px" ForeColor="#FF33CC" />
+                <DynamicMenuItemStyle BackColor="#CC0099" BorderColor="#666699" BorderWidth="1px" ForeColor="#33CCFF" />
+                <Items>
+                    <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Admin/AdminHome.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Events Mgmt" Value="Events Mgmt" NavigateUrl="~/Admin/EventsMgmt.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Help Desk" Value="Help Desk" NavigateUrl="~/Admin/HelpDesk.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Colleges" Value="Colleges" NavigateUrl="~/Admin/Colleges.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="College Allotment" Value="College Allotment" NavigateUrl="~/Admin/CollegeAllotment.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Enquiry" Value="Enquiry" NavigateUrl="~/Admin/Enquiry.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Registration Mgmt" Value="Registration Mgmt" NavigateUrl="~/Admin/RegstnMgmt.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Modal Paper" Value="Modal Paper" NavigateUrl="~/Admin/ModalPaper.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Admit Card" Value="Admit Card" NavigateUrl="~/Admin/AdmitCard.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Send SMS" Value="Send SMS" NavigateUrl="~/Admin/SendSMS.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Settings" Value="Settings">
+                        <asp:MenuItem Text="Change Password" Value="Change Password" NavigateUrl="~/Admin/ChangePassword.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/Admin/AdminLogout.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/UploadResult.aspx" Text="Upload Result" Value="Upload Result"></asp:MenuItem>
+                    </asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#003366" BorderColor="#FFFF66" BorderStyle="Solid" BorderWidth="1px" ForeColor="White" />
+                <StaticMenuItemStyle BorderColor="#FF3300" BorderWidth="2px" Font-Bold="True" Font-Size="15px" HorizontalPadding="5px" VerticalPadding="14px" />
+            </asp:Menu>
+        </div>
+        <div id="main">
+            <div id="heading">
+                <asp:ContentPlaceHolder ID="CPHHeading" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <div id="content">
+                <asp:ContentPlaceHolder ID="CPHContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="footer">
+                <div class="fpart">Copyright &copy; to Softpro India Lucknow</div>
+                <div class="fpart">Developed By:Er.Sachchidanand Shukla</div>
+        </div> 
+        </div>
+    </form>
+</body>
+</html>
